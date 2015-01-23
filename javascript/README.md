@@ -22,7 +22,7 @@ All javascript files should create their own scope and only set things that shou
 
 Always start the top level block with `'use strict;'`.
 
-```lang=js
+```js
 (function(window, $) {
    'use strict';
 
@@ -112,7 +112,7 @@ Commas should always be placed on the end of the line, not in a comma-first mann
 
 BAD:
 
-```lang=js
+```js
 var foo = {
     bar: 123
     , foo: 567
@@ -120,7 +120,7 @@ var foo = {
 ```
 
 GOOD:
-```lang=js
+```js
 var foo = {
     bar: 123,
     foo: 567
@@ -134,7 +134,7 @@ All variables should **always** be declared using `var`. There are **no** except
 If possible declare several variables using the same var statement.
 BAD:
 
-```lang=js
+```js
 var var1 = true;
 var var2 = false;
 var var3;
@@ -142,7 +142,7 @@ var var3;
 
 GOOD:
 
-```lang=js
+```js
 var var1 = true,
     var2 = false,
     var3;
@@ -156,7 +156,7 @@ Prefer `'` over `"`
 
 Just like PHP, Javascript has a type system with a lot of gotchas.
 
-```lang=js
+```js
 (false == 0) === true
 (false == ' ') === true
 (true == 1) === true
@@ -167,7 +167,7 @@ Just like PHP, Javascript has a type system with a lot of gotchas.
 
 In order to prevent confusion and bugs all comparisons with `null`, boolean values,  `0` and `1` and ` ''` should use the type comparison operators `===` and `!==`.
 
-```lang=js
+```js
 if (variable === true)
 if (variable !== false)
 if (variable === 0)
@@ -187,7 +187,7 @@ Within the conditional statements between the parentheses, operators must be sep
 
 The opening brace is written on the same line as the conditional statement. The closing brace is always written on its own line. Any content within the braces must be indented four spaces.
 
-```lang=js
+```js
 if (a != 2) {
     a = 2;
 }
@@ -195,7 +195,7 @@ if (a != 2) {
 
 For "if" statements that include "else if" or "else", the formatting must be as in these examples:
 
-```lang=js
+```js
 if (a != 2) {
     a = 2;
 } else {
@@ -219,7 +219,7 @@ Control statements written with the "switch" construct must have a single space 
 
 All content within the "switch" statement must be indented four spaces. Content under each "case" statement must be indented an additional four spaces.
 
-```lang=js
+```js
 switch (numPeople) {
     case 1:
         break;
@@ -238,7 +238,7 @@ It is sometimes useful to write a "case" statement which falls through to the ne
 
 When using a for loop the three parts must be separated by spaces:
 
-```lang=js
+```js
 for (var articleCounter = 0; articleCounter < numArticles; articleCounter++) {
     // display article
 }
@@ -250,7 +250,7 @@ There must also be a single whitespace before the opening parenthesis and one be
 
 When wrapping code that can throw exceptions in try/catch blocks, use the following syntax:
 
-```lang=js
+```js
 try {
     someFunctionThatMightThrowAnException();
 } catch (error) {
@@ -264,7 +264,7 @@ All functions should be bound to a variable using `var` and not declared directl
 
 BAD:
 
-```lang=js
+```js
 function doSomething(inputVar) {
 
 }
@@ -276,7 +276,7 @@ var func = function doSomething(inputVar) {
 
 GOOD:
 
-```lang=js
+```js
 var doSomething = function(inputVar) {
 
 };
@@ -285,7 +285,7 @@ var doSomething = function(inputVar) {
 Never create block-local function declarations:
 BAD:
 
-```lang=js
+```js
 (function() {
     if (true) {
         var func = function(inputVar) {
@@ -296,7 +296,7 @@ BAD:
 
 GOOD:
 
-```lang=js
+```js
 (function() {
      var func = function(inputVar) {
      };
@@ -307,7 +307,7 @@ GOOD:
 
 Its very important to remember to not leave any dangling commas `,` when declaring objects as this breaks on older IEs and some JS parsers.
 
-```lang=js
+```js
 var myObject = {
     key: 'value',
     key2: 'value', // <-- BAD
@@ -320,7 +320,7 @@ If you are using a library like underscore.js, lodash.js or jQuery that supports
 
 BAD:
 
-```lang=js
+```js
 var UberCoolObject = function() {
     this.name = 'Unset';
 };
@@ -336,7 +336,7 @@ UberCoolObject.prototype.alertName = function() {
 
 GOOD:
 
-```lang=js
+```js
 var UberCoolObject = function() {
     this.name = 'Unset';
 };
@@ -356,7 +356,7 @@ $.extend(UberCoolObject.prototype, {
 
 Create/fake abstract objects/classes as an object with all the functions. Then extend the prototype of the implementation object with the "abstract" object.
 
-```lang=js
+```js
 
 var TwitterAbstract = {
     fetchTweet: function(tweetId) {
