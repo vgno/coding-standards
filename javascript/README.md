@@ -1,6 +1,6 @@
-verview =
+# Overview
 
-== Scope ==
+## Scope
 
 This document provides the coding standards and guidelines for developers and teams working for or with VG Multimedia. The subjects covered are:
 
@@ -10,13 +10,13 @@ This document provides the coding standards and guidelines for developers and te
  - Inline documentation
  - Errors and exceptions
 
-== Goals ==
+## Goals
 
 Good coding standards are important in any development project, particularly when multiple developers are working on the same project. Having coding standards helps to ensure that the code is of high quality, has fewer bugs, and is easily maintained.
 
-= Javascript file formatting =
+# Javascript file formatting
 
-== General ==
+## General
 
 All javascript files should create their own scope and only set things that should be globally available on the `window` object. Its very important to end with semicolon `;`, not doing so might mess with Javascript compression and concatination tools.
 
@@ -32,19 +32,19 @@ Always start the top level block with `'use strict;'`.
 })(this, jQuery);
 ```
 
-== Indentation ==
+## Indentation
 
 Use an indent of 4 spaces with no tab characters. Editors should be configured to treat tabs as spaces in order to prevent injection of tab characters into the source code.
 
-== Line termination ==
+## Line termination
 
 Line termination follows the Unix text file convention. Lines must end with a single linefeed (LF) character, no carriage returns (CR). Lines should not contain trailing spaces. In order to facilitate this convention, most editors can be configured to strip trailing spaces, such as upon a save operation.
 
-== Line length ==
+## Line length
 
 Try to keep line length below 100 characters.
 
-= Naming Conventions =
+# Naming Conventions
 
 All files, classes, functions, variables, parameters, database names, table names etc should be English, and as generic terms as possible. Exceptions are allowed where the name is intended to reflect very specific Norwegian names or concepts, e.g. "skattelister", "rampelys" etc.
 
@@ -54,13 +54,13 @@ Examples:
 
  - files: edit-user.js, list-users.js
 
-== Filenames ==
+## Filenames
 
 For all other files, only alphanumeric characters are permitted. File names should not be camelCased. Spaces are prohibited.
 
-== Declarations ==
+## Declarations
 
-=== Variables ===
+### Variables
 
 Variable names may only contain alphanumeric characters. Underscores are not permitted. Numbers are permitted in variable names but are discouraged.
 
@@ -68,12 +68,12 @@ Like function names, variable names must always start with a lowercase letter an
 
 Verbosity is encouraged. Variable names should always be as verbose as practical. Terse variable names such as `i` and `n` are discouraged for anything other than the smallest loop contexts. If a loop contains more than 20 lines of code, variables for such indices or counters need to have more descriptive names.
 
-=== Constants ===
+### Constants
 
 * Use NAMES_LIKE_THIS
 * Never use the [[https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/const | const]] keyword
 
-== Functions and Methods ==
+## Functions and Methods
 
 Function names may only contain alphanumeric characters. Underscores are not permitted.
 
@@ -87,7 +87,7 @@ These are examples of acceptable names for functions:
  - getElementById()
  - generateLink()
 
-== Objects ==
+## Objects
 
 Object names may only contain alphanumeric characters. Underscores are not permitted.
 
@@ -100,13 +100,13 @@ These are examples of acceptable names for objects:
  - VGTVFeedParser
  - ArticleStyler
 
-= Coding style =
+# Coding style
 
-== Nesting ==
+## Nesting
 
 More then three levels of nesting is a [[http://en.wikipedia.org/wiki/Code_smell | code smell]] and might indicate that the code should be retought or that some of the logic should be separated out into a separate function.
 
-== Commas in lists and objects literals ==
+## Commas in lists and objects literals
 
 Commas should always be placed on the end of the line, not in a comma-first manner.
 
@@ -127,7 +127,7 @@ var foo = {
 };
 ```
 
-== Variables ==
+## Variables
 
 All variables should **always** be declared using `var`. There are **no** exceptions to this rule!
 
@@ -148,11 +148,11 @@ var var1 = true,
     var3;
 ```
 
-== Strings ==
+## Strings ##
 
 Prefer `'` over `"`
 
-== Comparisons ==
+## Comparisons
 
 Just like PHP, Javascript has a type system with a lot of gotchas.
 
@@ -177,9 +177,9 @@ if (variable === ' ')
 if (typeof variable == 'undefined')
 ```
 
-== Control statements ==
+## Control statements
 
-=== if / else / else if ===
+### if / else / else if
 
 Control statements based on the "if", "else", and "else if" constructs must have a single space before the opening parenthesis of the conditional, and a single space between the closing parenthesis and opening brace.
 
@@ -213,7 +213,7 @@ if (a < 2) {
 
 Javascript allows for these statements to be written without braces in some circumstances. The coding standard makes no differentiation and all "if", "else if", or "else" statements must use braces.
 
-=== switch ===
+### switch
 
 Control statements written with the "switch" construct must have a single space before the opening parenthesis of the conditional statement, and also a single space between the closing parenthesis and the opening brace.
 
@@ -234,7 +234,7 @@ The construct "default" may never be omitted from a "switch" statement.
 
 It is sometimes useful to write a "case" statement which falls through to the next case by not including a "break" or "return". To distinguish these cases from bugs, such "case" statements must contain the comment //" break intentionally omitted"//.
 
-=== for ===
+### for
 
 When using a for loop the three parts must be separated by spaces:
 
@@ -246,7 +246,7 @@ for (var articleCounter = 0; articleCounter < numArticles; articleCounter++) {
 
 There must also be a single whitespace before the opening parenthesis and one between the closing parenthesis and the opening brace.
 
-=== try/catch ===
+### try/catch
 
 When wrapping code that can throw exceptions in try/catch blocks, use the following syntax:
 
@@ -258,7 +258,7 @@ try {
 }
 ```
 
-== Functions ==
+## Functions
 
 All functions should be bound to a variable using `var` and not declared directly using the `function` keyword. They should also not be named function expressions because of scope pollution:
 
@@ -303,7 +303,7 @@ GOOD:
 })();
 ```
 
-== Objects ==
+## Objects
 
 Its very important to remember to not leave any dangling commas `,` when declaring objects as this breaks on older IEs and some JS parsers.
 
@@ -314,7 +314,7 @@ var myObject = {
 }
 ```
 
-=== Prototyping ===
+### Prototyping
 
 If you are using a library like underscore.js, lodash.js or jQuery that supports extending objects please extend `prototype` with a single object with all the methods.
 
@@ -352,7 +352,7 @@ $.extend(UberCoolObject.prototype, {
 });
 ```
 
-=== Abstract objects ===
+### Abstract objects
 
 Create/fake abstract objects/classes as an object with all the functions. Then extend the prototype of the implementation object with the "abstract" object.
 
@@ -379,10 +379,6 @@ $.extend(VGTweets.prototype, {
 }, TwitterAbstract);
 ```
 
-== Linting ==
+## Linting
 Please use [[https://github.com/jshint/jshint/ | JSHint]] with the `.jshintrc` config found in this
 repository.
-
-== Best practices ==
-
-Please also read the [[/w/best_practice/js_best_practices/ | Best Practices]] page.
