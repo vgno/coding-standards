@@ -131,21 +131,25 @@ var foo = {
 
 All variables should **always** be declared using `var`. There are **no** exceptions to this rule!
 
-If possible declare several variables using the same var statement.
 BAD:
 
 ```lang=js
 var var1 = true;
-var var2 = false;
-var var3;
+var2 = false;
 ```
 
 GOOD:
 
 ```lang=js
 var var1 = true,
-    var2 = false,
-    var3;
+    var2 = false;
+```
+
+OR:
+
+```lang=js
+var var1 = true;
+var var2 = false;
 ```
 
 ## Strings ##
