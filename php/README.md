@@ -12,9 +12,9 @@ Good coding standards are important in any development project, particularly whe
 
 ## Coding style
 
-Use [[ https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md | PSR-4 ]] for file structure and autoloading.
+Use [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) for file structure and autoloading.
 
-We build on top of [[ https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md | PSR-1 ]] and [[ https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md | PSR-2 ]] so make sure to read and understand them first.
+We build on top of [PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md) and [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md) so make sure to read and understand them first.
 
 ## Structure
 
