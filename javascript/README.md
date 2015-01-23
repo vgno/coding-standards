@@ -71,7 +71,7 @@ Verbosity is encouraged. Variable names should always be as verbose as practical
 ### Constants
 
 * Use NAMES_LIKE_THIS
-* Never use the [[https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/const | const]] keyword
+* Never use the [const](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/const) keyword
 
 ## Functions and Methods
 
@@ -104,7 +104,7 @@ These are examples of acceptable names for objects:
 
 ## Nesting
 
-More then three levels of nesting is a [[http://en.wikipedia.org/wiki/Code_smell | code smell]] and might indicate that the code should be retought or that some of the logic should be separated out into a separate function.
+More then three levels of nesting is a [code smell](http://en.wikipedia.org/wiki/Code_smell) and might indicate that the code should be retought or that some of the logic should be separated out into a separate function.
 
 ## Commas in lists and objects literals
 
@@ -380,5 +380,5 @@ $.extend(VGTweets.prototype, {
 ```
 
 ## Linting
-Please use [[https://github.com/jshint/jshint/ | JSHint]] with the `.jshintrc` config found in this
+Please use [JSHint](https://github.com/jshint/jshint/) with the `.jshintrc` config found in this
 repository.
