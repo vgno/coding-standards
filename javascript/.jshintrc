@@ -1,0 +1,31 @@
+{
+    "strict": true, /* Require all functions to run in ECMAScript 5's strict mode. */
+    "curly": true, /* Always put curly braces around blocks in loops and conditionals. */
+    "camelcase": true, /* Force all variable names to use either camelCase style or UPPER_CASE. */
+    "undef": true, /* Prohibit the use of explicitly undeclared variables. */
+    "latedef": "nofunc", /* Prohibit the use of a variable before it was defined. */
+    "eqeqeq": true, /* Prohibit the use of == and != in favor of === and !==. */
+    "browser": true, /* Define globals exposed by modern browsers. */
+    "node": true, /* Defines NodeJS globals. */
+    "es5": false, /* Disables syntax first defined in the ECMAScript 5.1 specification. */
+    "esnext": false, /* Disable ECMAScript 6 specific syntax. */
+    "moz": false, /* Disable Mozilla JavaScript extensions. */
+    "newcap": true, /* Requires you to capitalize names of constructor functions. */
+    "quotmark": "single", /* Enforce use og single quotes. */
+    "maxlen": 100, /* Set maximum line length to 100. */
+    "indent": 4, /* Set indent level to 4 spaces. */
+    "noarg": true, /* Prohibits the use of arguments.caller and arguments.callee */
+    "bitwise": false, /* Prohibits the use of bitwise operators such as ^ (XOR), | (OR) and others */
+    "globals": {
+        /* RequireJS */
+        "define": false,
+        "require": false,
+        /* mocha */
+        "describe"   : false,
+        "it"         : false,
+        "before"     : false,
+        "beforeEach" : false,
+        "after"      : false,
+        "afterEach"  : false
+    }
+}
