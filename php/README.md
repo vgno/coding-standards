@@ -1,22 +1,22 @@
-= Overview =
+# Overview
 
 This document provides the coding standards and guidelines for developers and teams working for or with VG.
 
-== Goals ==
+## Goals
 
 Good coding standards are important in any development project, particularly when multiple developers are working on the same project. Having coding standards helps to ensure that the code is of high quality, has fewer bugs, and is easily maintained.
 
-== Golden Rule ==
+## Golden Rule
 
 **Always imitate the existing coding standard in existing projects OR convert them. Do not mix!**
 
-== Coding style ==
+## Coding style
 
 Use [[ https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md | PSR-4 ]] for file structure and autoloading.
 
 We build on top of [[ https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md | PSR-1 ]] and [[ https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md | PSR-2 ]] so make sure to read and understand them first.
 
-== Structure ==
+## Structure
 
   - Add a single space after each comma delimiter.
   - Add a single space around binary operators (==, &&, ...).
@@ -31,7 +31,7 @@ We build on top of [[ https://github.com/php-fig/fig-standards/blob/master/accep
   - Exception message strings should be concatenated using sprintf.
   - Lines must end with a single linefeed (LF) character, no carriage returns (CR). Lines should not contain trailing spaces.
 
-== Naming Conventions ==
+## Naming Conventions
 
   - Use camelCase, not underscores.
   - Use namespaces for all classes.
@@ -43,7 +43,7 @@ We build on top of [[ https://github.com/php-fig/fig-standards/blob/master/accep
   - For type-hinting in PHPDocs and casting, use bool (instead of boolean or Boolean), int (instead of integer), float (instead of double or real).
   - All files, classes, functions, variables, parameters, database names, table names etc. should be English, and as generic terms as possible.
 
-== Inline documentation ==
+## Inline documentation
 
 One-line comments should use `//`, NOT the sharp `#` character. All comments must start with a space for improved readability.
 
@@ -56,7 +56,7 @@ doSomething();
 doSomething();
 ```
 
-=== API Documentation format ===
+### API Documentation format
 
 All documentation blocks ("docblocks") must be compatible with the phpDocumentor format. Describing the phpDocumentor format is beyond the scope of this document. For more information, visit [[http://phpdoc.org]].
 
@@ -64,7 +64,7 @@ Apply these rules to all code intended for the edges of your codebase where exte
 
 Don't add "placeholder" docblocks that does not provide any increased value to the code. It is better to not write docblocks, than to write useless docs.
 
-=== Functions ===
+### Functions
 
 Every function, including object methods, must have a docblock that contains at a minimum:
 
