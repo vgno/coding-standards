@@ -264,26 +264,22 @@ try {
 
 ## Functions
 
-All functions should be bound to a variable using `var` and not declared directly using the `function` keyword. They should also not be named function expressions because of scope pollution:
+Most functions should be named. This is especially important when working with asyncronous processes like timers, callbacks and similar. This helps greatly when debugging:
 
 BAD:
 
 ```js
-function doSomething(inputVar) {
-
-}
-
-var func = function doSomething(inputVar) {
-
-};
+setTimeout(function() {
+    doThatThing();
+}, 1000);
 ```
 
 GOOD:
 
 ```js
-var doSomething = function(inputVar) {
-
-};
+setTimeout(function someDescriptiveTitle() {
+    doThatThing();
+}, 1000);
 ```
 
 Never create block-local function declarations:
