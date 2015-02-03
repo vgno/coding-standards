@@ -114,7 +114,6 @@ $config
         'single_array_no_trailing_comma',
         'spaces_before_semicolon',
         'spaces_cast',
-        'strict', // WARNING: This can change behaviour!
         'unused_use',
         'whitespacy_lines',
         'short_array_syntax',
