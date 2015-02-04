@@ -96,9 +96,9 @@ In your project root create a `.php_cs` configuration file containing the follow
 
 ```
 <?php
-$finder = Symfony\CS\Finder\DefaultFinder::create()
-    ->in(__DIR__ . '/src')
-    ;
+// Folders to traverse. Multiple in() calls can be chained.
+$finder = Symfony\CS\Finder\DefaultFinder::create()->in(__DIR__ . '/src');
+
 $config = Symfony\CS\Config\Config::create();
 $config
     ->level(Symfony\CS\FixerInterface::PSR2_LEVEL)
@@ -119,5 +119,6 @@ $config
         'short_array_syntax',
     ))
     ->finder($finder);
+    
 return $config;
 ```
