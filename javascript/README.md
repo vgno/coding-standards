@@ -31,6 +31,7 @@ JavaScript CodeStyle
   - [Parentheses](#parentheses)
   - [Exceptions](#exceptions)
   - [Type Casting](#type-casting)
+  - [Parsing](#parsing)
   - [Multi-Line Statements](#multi-line-statements)
   - [Method Chaining](#method-chaining)
   - [String concatenation](#string-concatenation)
@@ -471,7 +472,7 @@ throw 'msg';
 ```
 
 ##Type Casting
-Type casting should be done explicitly:
+Type casting should be done explicitly (note the difference between [parsing](#parsing) and type casting):
 
 **Good:**
 ```javascript
@@ -486,6 +487,21 @@ String(baz)
 +bar
 baz + ''
 ~[].indexOf(qux)
+```
+
+##Parsing
+  * When parsing strings to integers or floats, a radix MUST be specified.
+
+**Good:**
+```javascript
+var width = parseInt('20px', 10);
+var someNum = parseInt('0x10', 16);
+```
+
+**Bad:**
+```javascript
+var width = parseInt('20px');
+var someNum = parseInt('0x10');
 ```
 
 ##Multi-Line Statements
