@@ -221,6 +221,25 @@ var myObject = {
     key2: 'value', // <-- BAD
 };
 ```
+  * Reserved words must be quoted if using them as properties:
+
+**Good:**
+
+```javascript
+var obj = {
+    'default': 'someValue',
+    'super': 'someSuper'
+};
+```
+
+**Bad:**
+
+```javascript
+var obj = {
+    default: 'someValue',
+    super: 'someSuper'
+};
+```
 
 ###Arrays
   * When enumerating elements in an array literal, spaces should be typed after the comma only:
