@@ -7,6 +7,7 @@
     "eqeqeq": true, /* Prohibit the use of == and != in favor of === and !==. */
     "browser": true, /* Define globals exposed by modern browsers. */
     "node": true, /* Defines NodeJS globals. */
+    "es3": true, /* Disallows keywords as properties in objects (<= IE8) */
     "es5": false, /* Disables syntax first defined in the ECMAScript 5.1 specification. */
     "esnext": false, /* Disable ECMAScript 6 specific syntax. */
     "moz": false, /* Disable Mozilla JavaScript extensions. */
