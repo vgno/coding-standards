@@ -12,7 +12,7 @@
     "moz": false, /* Disable Mozilla JavaScript extensions. */
     "newcap": true, /* Requires you to capitalize names of constructor functions. */
     "quotmark": "single", /* Enforce use og single quotes. */
-    "maxlen": 100, /* Set maximum line length to 100. */
+    "maxlen": 120, /* Set maximum line length to 100. */
     "indent": 4, /* Set indent level to 4 spaces. */
     "noarg": true, /* Prohibits the use of arguments.caller and arguments.callee */
     "bitwise": false, /* Prohibits the use of bitwise operators such as ^ (XOR), | (OR) and others */
