@@ -4,9 +4,6 @@ We follow the [Google Java Code Style](https://google-styleguide.googlecode.com/
 
 **3.3.1** Wildcard imports are allowed in unit tests
 
-**4.1.1** You can ommit braces for single-statement `if` (but not for single-statement `for`).
-	
-	
 **5.2.5** 	Non-constant field name - we use mPrefixing on private and PascalCasing on public fields. Examples:
       
     public String SomeString;
