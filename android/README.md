@@ -38,7 +38,9 @@ public class ExampleClass {
      * @param count number of characters to chop. Can be larger than the length of the string.
      */
     public String chop(String string, int count) {
-        if (string == null) throw new IllegalArgumentException("String must be provided");
+        if (string == null) {
+            throw new IllegalArgumentException("String must be provided");
+        }
         int endIx = Math.min(string.length(), count - 1);
         return string.substring(0, endIx);
     }
