@@ -94,7 +94,7 @@ In order to convert existing project to new code standards, please use the lates
 
 In your project root create a `.php_cs` configuration file containing the following:
 
-```
+```php
 <?php
 // Folders to traverse. Multiple in() calls can be chained.
 $finder = Symfony\CS\Finder\DefaultFinder::create()->in(__DIR__ . '/src');
