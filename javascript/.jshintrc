@@ -17,6 +17,7 @@
     "indent": 4, /* Set indent level to 4 spaces. */
     "noarg": true, /* Prohibits the use of arguments.caller and arguments.callee */
     "bitwise": false, /* Prohibits the use of bitwise operators such as ^ (XOR), | (OR) and others */
+    "unused": true, /* Don't allow unused variables */
     "globals": {
         /* RequireJS */
         "define": false,
