@@ -4,11 +4,15 @@ We follow the [Google Java Code Style](https://google-styleguide.googlecode.com/
 
 **3.3.1** Wildcard imports are allowed in unit tests
 
+(Why: Both JUnit and Robolectric code is prettier when you can use `assertEquals` and `mock` without class prefixing)
+
 **5.2.5** 	Non-constant field name - we use mPrefixing on private and PascalCasing on public fields. Examples:
       
     public String SomeString;
     private String mSomeString;
-	
+    
+(Why: Google uses mPrefixing in the Android SDK. PascalCasing in addition completes the  distiguishing between private fields, public fields and local variables)
+
 # Example class
 
 ```
