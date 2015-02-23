@@ -10,6 +10,10 @@ Good coding standards are important in any development project, particularly whe
 
 **Always imitate the existing coding standard in existing projects OR convert them. Do not mix!**
 
+## Editor setup
+
+See [setting up editors and tools](https://github.com/vgno/coding-standards/blob/master/php/editors.md) for details on how to set up editors and tools.
+
 ## Coding style
 
 Use [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) for file structure and autoloading.
@@ -72,7 +76,7 @@ Every function, including object methods, must have a docblock that contains at 
  - All of the arguments
  - All of the possible return values
  - If a function/method may throw an exception, use "@throws"
- 
+
 ```
 <?php
 /**
@@ -119,6 +123,6 @@ $config
         'short_array_syntax',
     ))
     ->finder($finder);
-    
+
 return $config;
 ```
