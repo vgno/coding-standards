@@ -51,7 +51,7 @@ We build on top of [PSR-1](https://github.com/php-fig/fig-standards/blob/master/
 
 One-line comments should use `//`, NOT the sharp `#` character. All comments must start with a space for improved readability.
 
-```
+```php
 <?php
 //this is incorrect
 doSomething();
@@ -62,7 +62,7 @@ doSomething();
 
 ### API Documentation format
 
-All documentation blocks ("docblocks") must be compatible with the phpDocumentor format. Describing the phpDocumentor format is beyond the scope of this document. For more information, visit [[http://phpdoc.org]].
+All documentation blocks ("docblocks") must be compatible with the phpDocumentor format. Describing the phpDocumentor format is beyond the scope of this document. For more information, visit [phpDocumentor](http://phpdoc.org).
 
 Apply these rules to all code intended for the edges of your codebase where external (e.g. not you) consumption is expected.
 
@@ -77,7 +77,7 @@ Every function, including object methods, must have a docblock that contains at 
  - All of the possible return values
  - If a function/method may throw an exception, use "@throws"
 
-```
+```php
 <?php
 /**
  * Does something interesting
