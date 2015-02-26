@@ -87,7 +87,8 @@ Every function, including object methods, must have a docblock that contains at 
  * @throws Some_Exception If something interesting cannot happen
  * @return boolean
  */
-function doesSomethingInteresting(Place $where, $repeat = 1) {
+function doesSomethingInteresting(Place $where, $repeat = 1)
+{
     // Implementation
 }
 ```
