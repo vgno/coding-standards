@@ -20,6 +20,7 @@ Here are some of the documents from Apple that informed the style guide. If some
 * [Error handling](#error-handling)
 * [Methods](#methods)
 * [Variables](#variables)
+* [Blocks](#blocks)
 * [Naming](#naming)
 * [Comments](#comments)
 * [Init & Dealloc](#init-and-dealloc)
@@ -33,6 +34,7 @@ Here are some of the documents from Apple that informed the style guide. If some
 * [Booleans](#booleans)
 * [Singletons](#singletons)
 * [Xcode Project](#xcode-project)
+* [CocoaPods/3rd-party libriaries](#cocoapods-/-3rd-party-libraries)
 
 ## Dot-Notation Syntax
 
@@ -164,6 +166,24 @@ Property definitions should be used in place of naked instance variables wheneve
 #### Variable Qualifiers
 
 When it comes to the variable qualifiers [introduced with ARC](https://developer.apple.com/library/ios/releasenotes/objectivec/rn-transitioningtoarc/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011226-CH1-SW4), the qualifer (`__strong`, `__weak`, `__unsafe_unretained`, `__autoreleasing`) should be placed between the asterisks and the variable name, e.g., `NSString * __weak text`. 
+
+
+## Blocks
+
+ * Blocks should have a space between their return type and name.
+ * Block definitions should omit their return type when possible.
+ * Block definitions should omit their arguments if they are `void`.
+ * Parameters in block types should be named unless the block is initialized immediately.
+
+```objc
+void (^blockName1)(void) = ^{
+    // do some things
+};
+
+id (^blockName2)(id) = ^ id (id args) {
+    // do some things
+};
+```
 
 ## Naming
 
@@ -428,6 +448,7 @@ This will prevent [possible and sometimes prolific crashes](http://cocoasamurai.
 The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped not only by type, but also by feature for greater clarity.
 
 When possible, always turn on "Treat Warnings as Errors" in the target's Build Settings and enable as many [additional warnings](http://boredzo.org/blog/archives/2009-11-07/warnings) as possible. If you need to ignore a specific warning, use [Clang's pragma feature](http://clang.llvm.org/docs/UsersManual.html#controlling-diagnostics-via-pragmas).
+
 
 # Other Objective-C Style Guides
 
