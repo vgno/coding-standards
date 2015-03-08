@@ -1,6 +1,14 @@
 # VG Objective-C Coding standards
 
-This style guide outlines the coding conventions of the iOS team at VG. 
+This style guide outlines the coding conventions of the iOS team at VG. The most important basis of all coding done in Objective-C on behalf of VG, should be that your code is written in a clear and consise manner, preserving readability and clarity first and foremost. 
+
+## Goals
+
+Good coding standards are important in any development project, particularly when multiple developers are working on the same project. Having coding standards helps to ensure that the code is of high quality, has fewer bugs, and is easily maintained.
+
+## Golden Rule
+
+**Always imitate the existing coding standard in existing projects OR convert them. Do not mix!**
 
 ## Introduction
 
@@ -33,8 +41,10 @@ Here are some of the documents from Apple that informed the style guide. If some
 * [Image Naming](#image-naming)
 * [Booleans](#booleans)
 * [Singletons](#singletons)
+* [Architecture](#architecture)
 * [Xcode Project](#xcode-project)
-* [CocoaPods/3rd-party libriaries](#cocoapods-/-3rd-party-libraries)
+* [3rd-party libriaries](#3rd-party-libraries)
+
 
 ## Dot-Notation Syntax
 
@@ -443,11 +453,38 @@ Singleton objects should use a thread-safe pattern for creating their shared ins
 ```
 This will prevent [possible and sometimes prolific crashes](http://cocoasamurai.blogspot.com/2011/04/singletons-your-doing-them-wrong.html).
 
+## Architecture
+
 ## Xcode project
 
 The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped not only by type, but also by feature for greater clarity.
 
 When possible, always turn on "Treat Warnings as Errors" in the target's Build Settings and enable as many [additional warnings](http://boredzo.org/blog/archives/2009-11-07/warnings) as possible. If you need to ignore a specific warning, use [Clang's pragma feature](http://clang.llvm.org/docs/UsersManual.html#controlling-diagnostics-via-pragmas).
+
+## 3rd-party libraries
+
+### AFNetworking
+
+AFNetworking is used for most HTTP-stacks in VG development. See the [VGBoilerplate]() repository for a VG-specific subclass to override
+
+### mogenerator 
+
+While mogenerator simplifies the maintenance of the managed objects in core data and adds a lot of functionality CoreData fails to produce on its own, it also leads to bad readability in viewcontrollers. Consider the following code:
+
+```objc
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K <= %@ AND (%K == nil OR %K >= %@)",
+                              VGSomeManagedObject.startDate, date,
+                              VGSomeManagedObject.stopDate,
+                              VGSomeManagedObject.stopDate, date];
+```
+
+The same predicate can also be written like this:
+
+```objc
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@"startDate <= %@ AND (stopDate == nil OR stopDate >= %@)", date, date];
+```
+
+The complextiy of the predicate will obviously change based on the number of keys and values to replace. While it is unarguable that the first example will throw compiler errors if the datamodel changes, it should be your responsibility as a developer to test the application for potential errors after a data model change. You should either create a fetchrequest that's stored in the CoreData model-file, or store the predicates with dynamic keypaths inside the model-files (Also know as "Fat Model" or MVVM, see section about Architecture for further details)
 
 
 # Other Objective-C Style Guides
