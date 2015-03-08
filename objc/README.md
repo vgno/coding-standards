@@ -2,8 +2,6 @@
 
 This style guide outlines the coding conventions of the iOS team at VG. The most important basis of all coding done in Objective-C on behalf of VG, should be that your code is written in a clear and consise manner, preserving readability and clarity first and foremost. 
 
-## Goals
-
 Good coding standards are important in any development project, particularly when multiple developers are working on the same project. Having coding standards helps to ensure that the code is of high quality, has fewer bugs, and is easily maintained.
 
 ## Golden Rule
@@ -486,6 +484,9 @@ NSPredicate *predicate = [NSPredicate predicateWithFormat:@"startDate <= %@ AND 
 
 The complextiy of the predicate will obviously change based on the number of keys and values to replace. While it is unarguable that the first example will throw compiler errors if the datamodel changes, it should be your responsibility as a developer to test the application for potential errors after a data model change. You should either create a fetchrequest that's stored in the CoreData model-file, or store the predicates with dynamic keypaths inside the model-files (Also know as "Fat Model" or MVVM, see section about Architecture for further details)
 
+### ReactiveCocoa
+
+If you consider using ReactiveCocoa, please don't. Currently, there are more developers accustomed by following the Apple standards of writing code, that are used to writing ReactiveCocoa. 
 
 # Other Objective-C Style Guides
 
