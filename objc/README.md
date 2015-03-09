@@ -46,7 +46,7 @@ Here are some of the documents from Apple that informed the style guide. If some
 
 ## Dot-Notation Syntax
 
-Dot-notation should **always** be used for accessing and mutating properties. Bracket notation is preferred in all other instances.
+Dot-notation should **always** be used for accessing and mutating properties. Bracket notation is preferred in all other instances. See also the section about [architecture](#architecture)
 
 **For example:**
 ```objc
@@ -453,6 +453,8 @@ This will prevent [possible and sometimes prolific crashes](http://cocoasamurai.
 
 ## Architecture
 
+Objective-C is a highly verbose language and the designpatterns can sometimes lead to very loosely coupled code based on NSNotificationCenter, or very tightly coupled code with massive view controllers caused by under-modularization. Using dot-notation for properties and brackets for messaging can give hints that your code is too loosely coupled and you are violating [the law of Demeter](http://haacked.com/archive/2009/07/14/law-of-demeter-dot-counting.aspx/). You are free to choose the architecture that suits your style and the projects demands, but you are strongly encouraged to strive for high readability and clearity in the code you produce for VG.
+
 ## Xcode project
 
 The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped not only by type, but also by feature for greater clarity.
@@ -463,7 +465,7 @@ When possible, always turn on "Treat Warnings as Errors" in the target's Build S
 
 ### AFNetworking
 
-AFNetworking is used for most HTTP-stacks in VG development. See the [VGBoilerplate]() repository for a VG-specific subclass to override
+AFNetworking is used for most HTTP-stacks in VG development. If you decide to roll your own HTTP-stack, or use a different library, we advise you to design your client as close to Apple/AFNetworking as you can. 
 
 ### mogenerator 
 
