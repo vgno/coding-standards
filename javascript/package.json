@@ -1,0 +1,23 @@
+{
+  "name": "vgno-coding-standards",
+  "version": "1.0.0",
+  "description": "VG.no coding standards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vgno/coding-standards.git"
+  },
+  "keywords": [
+    "coding-standard",
+    "vgno"
+  ],
+  "author": "Verdens Gang AS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vgno/coding-standards/issues"
+  },
+  "homepage": "https://github.com/vgno/coding-standards"
+}
