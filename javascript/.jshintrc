@@ -28,6 +28,8 @@
         "before"     : false,
         "beforeEach" : false,
         "after"      : false,
-        "afterEach"  : false
+        "afterEach"  : false,
+        /* Allow JSON global even if IE7 doesn't support it (see "es3" option) */
+        "JSON": false
     }
 }
