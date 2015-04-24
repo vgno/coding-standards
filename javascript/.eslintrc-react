@@ -4,6 +4,12 @@
         "mocha": true,
         "browser": true
     },
+    "plugins": [
+        "react"
+    ],
+    "ecmaFeatures": {
+        "jsx": true
+    },
     "rules": {
         "block-scoped-var": 0,
         "brace-style": 2,
