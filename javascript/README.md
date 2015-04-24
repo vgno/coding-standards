@@ -715,3 +715,7 @@ repository.
 ###JSCS
 
 Please use [JSCS](http://jscs.info/) with the `.jscsrc` config found in this repository.
+
+###ESLint
+
+Please use [ESLint](http://eslint.org/) with the `.eslintrc` config found in this repository.
