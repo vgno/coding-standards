@@ -241,6 +241,13 @@ Instance variables should be camel-case with the leading word being lowercase, a
 id varnm;
 ```
 
+## XIB's naming
+XIB files allow to give custom name for it's elements. Therefore each of elements that are part of XIB file should have a proper name that reflects it's purpouse.
+
+** Not: **
+
+![Alt text](/objc/bad_xib.png?raw=true "Badly named XIB")
+
 ## Comments
 
 When they are needed, comments should be used to explain **why** a particular piece of code does something. Any comments that are used must be kept up-to-date or deleted.
@@ -423,6 +430,28 @@ if (![someObject boolValue])
 ```objc
 if (isAwesome == YES) // Never do this.
 if ([someObject boolValue] == NO)
+```
+
+-----
+
+Complex if statements should be assigned ta a meaningfull variable, it allows easier maintenance.
+
+**For example**
+
+```
+BOOL shouldLoadNewAssets = !self.loading && [self nextPage] && contentOffset.x <= kLoadingDistance;
+if (shouldLoadNewAssets) {
+	...
+}
+```
+
+** Not: **
+
+```
+if (!self.loading && [self nextPage] && contentOffset.x <= kLoadingDistance) {
+	...
+}
+
 ```
 
 -----
