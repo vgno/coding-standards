@@ -446,7 +446,7 @@ if (shouldLoadNewAssets) {
 }
 ```
 
-** Not: **
+**Not:**
 
 ```
 if (!self.loading && [self nextPage] && contentOffset.x <= kLoadingDistance) {
