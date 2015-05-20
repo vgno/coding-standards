@@ -1,6 +1,9 @@
 {
   "name": "vgno-coding-standards",
-  "version": "1.0.5",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "version": "1.0.6",
   "description": "VG.no coding standards",
   "main": "index.js",
   "scripts": {
