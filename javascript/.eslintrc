@@ -25,7 +25,7 @@
         "indent": 2,
         "key-spacing": 2,
         "max-depth": [2, 6],
-        "max-len": 0,
+        "max-len": [2, 120, 4],
         "max-nested-callbacks": [2, 6],
         "max-params": 0,
         "max-statements": 0,
