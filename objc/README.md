@@ -243,7 +243,7 @@ id varnm;
 
 ## XIB's naming
 
-XIB files allow to give custom name for it's elements. Therefore each of elements that are part of XIB file should have a proper name that reflects it's purpouse.
+XIB files allows giving custom names for its elements. Therefore each element that is part of the XIB file should have a proper name that reflects its purpose.
 
 ** Not: **
 
@@ -435,7 +435,7 @@ if ([someObject boolValue] == NO)
 
 -----
 
-Complex if statements should be assigned to a meaningfull variable, it allows easier maintenance.
+Complex if statements should be assigned to a meaningfull variable, it makes maintenance easier.
 
 **For example**
 
