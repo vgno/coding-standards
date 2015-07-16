@@ -139,6 +139,15 @@ Some of Apple’s APIs write garbage values to the error parameter (if non-NULL)
 
 ## Methods
 
+Names of most private methods in the Cocoa frameworks have an underscore prefix (for example, _fooData ) to mark them as private. From this fact follow two recommendations.
+
+- Don’t use the underscore character as a prefix for your private methods. Apple reserves this convention.
+- If you are subclassing a large Cocoa framework class (such as NSView or UIView) and you want to be absolutely sure that your private methods have names different from those in the superclass, you can add your own prefix to your private methods. The prefix should be as unique as possible, as a general rule either conform to using VG or SCH
+
+**For Example**:
+```objc
+- (void)VG_addObject:(id)object;
+```
 In method signatures, there should be a space after the scope (-/+ symbol). There should be a space between the method segments.
 
 **For Example**:
