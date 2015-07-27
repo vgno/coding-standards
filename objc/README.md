@@ -1,6 +1,8 @@
 # VG Objective-C Coding standards
 
-This style guide outlines the coding conventions of the iOS team at VG. The most important basis of all coding done in Objective-C on behalf of VG, should be that your code is written in a clear and consise manner, preserving readability and clarity first and foremost. 
+This style guide outlines the coding conventions of the iOS team at VG. The styleguide is mainly based on the [NYTimes Objective-C style guide](https://github.com/NYTimes/objective-c-style-guide), with some additions for VG.
+
+The most important basis of all coding done in Objective-C on behalf of VG, should be that your code is written in a clear and consise manner, preserving readability and clarity first and foremost. 
 
 Good coding standards are important in any development project, particularly when multiple developers are working on the same project. Having coding standards helps to ensure that the code is of high quality, has fewer bugs, and is easily maintained.
 
