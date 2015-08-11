@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "VG.no coding standards",
   "main": "index.js",
   "scripts": {
