@@ -122,7 +122,7 @@
         "one-var": 0,
         "operator-assignment": [2, "always"],
         "padded-blocks": [2, "never"],
-        "quote-props": [2,  "consistent-as-needed"],
+        "quote-props": [2,  "as-needed", { "keywords": true }],
         "quotes": [2, "single"],
         "radix": 2,
         "semi": 2,
