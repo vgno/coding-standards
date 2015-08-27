@@ -146,7 +146,7 @@
         }],
         "valid-typeof": 2,
         "vars-on-top": 0,
-        "wrap-iife": 2,
+        "wrap-iife": [2, "any"],
         "wrap-regex": 0,
         "yoda": 2
     }
