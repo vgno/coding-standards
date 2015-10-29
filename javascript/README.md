@@ -137,15 +137,17 @@ var fs = require('fs');
     * on a new line;
     * as close as possible to the place where it's first used.
 
+  * Each `var` statement should have only one variable declared in it.
+
 **Good:**
 
 ```javascript
 var keys = ['foo', 'bar'];
 var values = [23, 42];
 
-var object = {}, key;
+var object = {};
 while (items.length) {
-    key = keys.pop();
+    var key = keys.pop();
     object[key] = values.pop();
 }
 ```
@@ -153,8 +155,10 @@ while (items.length) {
 **Bad:**
 
 ```javascript
-var keys = ['foo', 'bar'], values = [23, 42];
-var object = {};
+var keys = ['foo', 'bar'],
+    values = [23, 42],
+    object = {},
+    key;
 
 while (items.length) {
     var key = keys.pop();
