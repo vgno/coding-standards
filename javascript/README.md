@@ -714,6 +714,19 @@ This rule does not apply to modules that are imported "on demand".
 
 ## Linting
 
+We encourage and suggest our developers to use [ESLint](http://eslint.org/) as the primary linting tool, since it supports the largest number of rule checks and does both linting and style checks.
+
+###ESLint
+
+Please use [ESLint](http://eslint.org/) with the `eslint-config-vgno`-package from NPM:
+
+```
+npm install --save eslint-config-vgno
+echo '{ "extends": "vgno" }' > .eslintrc
+```
+
+Alternatively, the `.eslintrc` config found in this repository can be used.
+
 ###JSHint
 
 Please use [JSHint](https://github.com/jshint/jshint/) with the `.jshintrc` config found in this
@@ -722,7 +735,3 @@ repository.
 ###JSCS
 
 Please use [JSCS](http://jscs.info/) with the `.jscsrc` config found in this repository.
-
-###ESLint
-
-Please use [ESLint](http://eslint.org/) with the `.eslintrc` config found in this repository.
