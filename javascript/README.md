@@ -464,17 +464,20 @@ The `eval` function should be avoided.
 `json` serialized data should be parsed with [JSON.parse](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/JSON/parse).
 
 ##undefined
-Checking for `undefined` values should be done using the strict equality operator.
+Checking for `undefined` values can be done using either the strict equality operator or using `typeof`.
 
 **Good:**
 ```javascript
 x === undefined;
 ```
 
-**Bad:**
+**Accepted:**
 ```javascript
 typeof x === 'undefined'
+```
 
+**Bad:**
+```javascript
 x === void 0
 ```
 
