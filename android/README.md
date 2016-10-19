@@ -1,4 +1,4 @@
-﻿# General
+# General
 
 We follow the [Google Java Code Style](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html), with some exceptions:
 
@@ -13,15 +13,17 @@ We follow the [Google Java Code Style](https://google-styleguide.googlecode.com/
 (Why: 80 or 100 limit is archaic - limited by printers/console width of earlier age. Makes code less readable in a modern IDE, in my opinion)
 
 **5.2.5** 	Non-constant field name - we use mPrefixing on private and PascalCasing on public fields. Examples:
-      
+
+```java
     public String SomeString;
     private String mSomeString;
+```
     
 (Why: Google uses mPrefixing in the Android SDK. PascalCasing in addition completes the  distiguishing between private fields, public fields and local variables)
 
 # Example class
 
-```
+```java
 package no.vg.someapp;
 
 import android.media.MediaPlayer;
