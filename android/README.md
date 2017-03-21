@@ -1,6 +1,6 @@
 # General
 
-We follow the [Google Java Code Style](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html), with some exceptions:
+We follow the [Google Java Code Style](https://google.github.io/styleguide/javaguide.html), with some exceptions:
 
 **3.3.1** Wildcard imports are allowed in unit tests
 
